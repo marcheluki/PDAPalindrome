@@ -1,6 +1,6 @@
-palabra = "abbba"
+palabra = "babab"
 
-def d(i, s):
+def d(i, s): #ESTADO Q1
     s2 = s[:] #copia del stack
     print(i,s2) #imprime el índice y el stack
     if i == len(palabra) and len(s2)==0: #llega a caso base (i = palabra y stack esta vacio)
@@ -12,7 +12,7 @@ def d(i, s):
         return d(i+1,s2)  #pasa a la siguiente letra
     return False #si no se cumple la condición anterior, no es palíndromo
 
-def f(i,s):
+def f(i,s): #ESTADO Q0
     s2 = s[:] #copia del stack
     if i==len(palabra): #si i es igual a la longitud de la palabra y no haz pop nada
         return False #no es palíndromo, estado de agregacion no es final
